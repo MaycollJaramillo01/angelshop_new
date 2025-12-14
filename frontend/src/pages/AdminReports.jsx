@@ -13,7 +13,7 @@ const AdminReports = () => {
   return (
     <section>
       <h2>Reportes</h2>
-      {data?.data?.map((row) => (
+      {data?.map((row) => (
         <div key={row._id.day}>
           {row._id.day}: {row.count} reservas, exp:{row.expired}
         </div>

@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const VariantSchema = new mongoose.Schema(
   {
-    sku: { type: String, required: true, unique: true },
+    sku: { type: String, required: true },
     size: { type: String, enum: ['S', 'M', 'L', 'XL'], required: true },
     color: { type: String, required: true },
     stockAvailable: { type: Number, default: 0 },
@@ -26,6 +26,6 @@ const ProductSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-ProductSchema.index({ 'variants.sku': 1 });
+ProductSchema.index({ 'variants.sku': 1 }, { unique: true, sparse: true });
 
 module.exports = mongoose.model('Product', ProductSchema);

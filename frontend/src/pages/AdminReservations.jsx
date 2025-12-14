@@ -18,7 +18,7 @@ const AdminReservations = () => {
   return (
     <section>
       <h2>Reservas</h2>
-      {data?.data?.map((r) => (
+      {data?.map((r) => (
         <article key={r.code} style={{ background: 'white', padding: '1rem', marginBottom: '0.5rem' }}>
           <div>
             {r.code} - {r.status}

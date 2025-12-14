@@ -19,7 +19,7 @@ const MyReservations = () => {
   return (
     <section>
       <h2>Mis reservas</h2>
-      {data?.data?.map((r) => (
+      {data?.map((r) => (
         <article key={r.code} style={{ background: 'white', padding: '1rem', marginBottom: '0.5rem' }}>
           <div>
             <strong>{r.code}</strong> - {r.status} <ReservationTimer expiresAt={r.expiresAt} />

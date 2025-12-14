@@ -13,7 +13,7 @@ const AdminProducts = () => {
   return (
     <section>
       <h2>Productos</h2>
-      {data?.data?.map((p) => (
+      {data?.map((p) => (
         <article key={p._id} style={{ background: 'white', padding: '1rem', marginBottom: '0.5rem' }}>
           <div>
             {p.name} - ₡{p.price}

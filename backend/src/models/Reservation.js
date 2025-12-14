@@ -24,7 +24,7 @@ const EventSchema = new mongoose.Schema(
 
 const ReservationSchema = new mongoose.Schema(
   {
-    code: { type: String, required: true, unique: true },
+    code: { type: String, required: true },
     customerEmail: { type: String, required: true },
     customerPhone: String,
     status: {

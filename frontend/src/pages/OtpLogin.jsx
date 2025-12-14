@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { requestOtp, verifyOtp } from '../api/reservations';
+import { requestOtp, verifyOtp } from '../api/auth';
 
 const OtpLogin = () => {
   const [email, setEmail] = useState('');
