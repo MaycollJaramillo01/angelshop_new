@@ -3,9 +3,9 @@ import Navbar from './Navbar';
 import Toast from './Toast';
 
 const Layout = ({ children }) => (
-  <div>
+  <div className="page">
     <Navbar />
-    <main style={{ padding: '1rem 2rem' }}>{children}</main>
+    <main className="page__content">{children}</main>
     <Toast />
   </div>
 );
