@@ -45,7 +45,8 @@ router.post('/products', validate(productSchema), async (req, res, next) => {
 
 router.get('/products', async (req, res, next) => {
   try {
-    const products = await Product.find().sort({ createdAt: -1 });
+    const products = await Product.find();
+    products.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
     res.json(products);
   } catch (err) {
     next(err);
@@ -98,9 +99,13 @@ router.get('/reservations', async (req, res, next) => {
     const { status, from, to } = req.query;
     const filter = {};
     if (status) filter.status = status;
-    if (from) filter.createdAt = { ...filter.createdAt, $gte: new Date(from) };
-    if (to) filter.createdAt = { ...filter.createdAt, $lte: new Date(to) };
-    const reservations = await Reservation.find(filter).sort({ createdAt: -1 });
+    if (from || to) {
+      filter.createdAt = {};
+      if (from) filter.createdAt.$gte = from;
+      if (to) filter.createdAt.$lte = to;
+    }
+    const reservations = await Reservation.find(filter);
+    reservations.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
     res.json(reservations);
   } catch (err) {
     next(err);

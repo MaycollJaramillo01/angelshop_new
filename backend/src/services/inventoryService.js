@@ -2,8 +2,12 @@ const Product = require('../models/Product');
 
 async function adjustStock(session, items, direction = 'lock') {
   for (const item of items) {
-    const product = await Product.findById(item.productId).session(session);
-    if (!product) throw new Error('Product not found');
+    const productData = await Product.findById(item.productId);
+    if (!productData) throw new Error('Product not found');
+    
+    // Convertir el objeto plano a una instancia de Product
+    const product = new Product(productData);
+    
     const variant = product.variants.find((v) => v.sku === item.variantSku);
     if (!variant) throw new Error('Variant not found');
     if (direction === 'lock') {
@@ -16,17 +20,21 @@ async function adjustStock(session, items, direction = 'lock') {
     } else if (direction === 'release') {
       variant.stockLocked = Math.max(0, variant.stockLocked - item.qty);
     }
-    await product.save({ session });
+    await product.save();
   }
 }
 
 async function adminAdjustStock(productId, variantSku, deltaAvailable, session) {
-  const product = await Product.findById(productId).session(session || null);
-  if (!product) throw new Error('Product not found');
+  const productData = await Product.findById(productId);
+  if (!productData) throw new Error('Product not found');
+  
+  // Convertir el objeto plano a una instancia de Product
+  const product = new Product(productData);
+  
   const variant = product.variants.find((v) => v.sku === variantSku);
   if (!variant) throw new Error('Variant not found');
   variant.stockAvailable = Math.max(0, variant.stockAvailable + deltaAvailable);
-  await product.save({ session });
+  await product.save();
   return variant;
 }
 

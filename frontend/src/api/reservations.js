@@ -26,3 +26,13 @@ export async function cancelReservation(token, code) {
   );
   return data;
 }
+
+export async function createReservationDirect(data) {
+  const { data: response } = await http.post('/api/reservations/direct', data);
+  return response;
+}
+
+export async function fetchReservationByEmail(email) {
+  const { data } = await http.get(`/api/reservations/by-email/${encodeURIComponent(email)}`);
+  return data;
+}

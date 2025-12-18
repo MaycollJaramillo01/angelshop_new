@@ -1,0 +1,573 @@
+/* Catálogo rediseñado - Integrado con el estilo del sitio */
+
+.catalog-page-amazon {
+  min-height: 100vh;
+  background: var(--primary);
+  padding: 0;
+}
+
+.catalog-header-amazon {
+  background: var(--primary);
+  padding: 2rem clamp(1rem, 4vw, 4rem);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2rem;
+}
+
+.catalog-header-amazon h1 {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  margin: 0 0 0.5rem 0;
+  color: var(--title);
+  letter-spacing: -0.02em;
+  font-weight: 400;
+}
+
+.catalog-breadcrumb {
+  color: var(--muted);
+  font-size: 0.9375rem;
+  margin: 0;
+  font-weight: 300;
+}
+
+.catalog-layout-amazon {
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 2rem;
+  padding: 0 clamp(1rem, 4vw, 4rem) 4rem;
+}
+
+/* Sidebar */
+.catalog-sidebar {
+  width: 280px;
+  background: var(--primary);
+  border: 1px solid var(--border);
+  border-radius: 0;
+  padding: 2rem;
+  height: fit-content;
+  position: sticky;
+  top: 2rem;
+  transition: all 0.3s ease;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.sidebar-header h2 {
+  font-size: 1rem;
+  margin: 0;
+  color: var(--title);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.85rem;
+}
+
+.close-sidebar {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--title);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+}
+
+.close-sidebar:hover {
+  color: var(--accent);
+}
+
+.category-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.category-nav-item {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9375rem;
+  color: var(--muted);
+  border-radius: 0;
+  transition: all 0.2s ease;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  position: relative;
+}
+
+.category-nav-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--accent);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.category-nav-item:hover {
+  color: var(--title);
+  background: transparent;
+  padding-left: 1.5rem;
+}
+
+.category-nav-item:hover::before {
+  opacity: 1;
+}
+
+.category-nav-item.active {
+  color: var(--title);
+  font-weight: 400;
+  padding-left: 1.5rem;
+}
+
+.category-nav-item.active::before {
+  opacity: 1;
+}
+
+.category-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.subcategory-list {
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-left: 1rem;
+  border-left: 1px solid var(--border);
+}
+
+.subcategory-item {
+  text-align: left;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  color: var(--muted);
+  border-radius: 0;
+  transition: all 0.2s ease;
+  font-weight: 300;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.subcategory-item:hover {
+  color: var(--title);
+  background: transparent;
+}
+
+.subcategory-item.active {
+  color: var(--accent);
+  font-weight: 400;
+}
+
+/* Contenido principal */
+.catalog-main {
+  flex: 1;
+  background: var(--primary);
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+.catalog-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.sidebar-toggle {
+  display: none;
+  padding: 0.75rem 1.5rem;
+  background: var(--primary);
+  border: 1px solid var(--border);
+  border-radius: 0;
+  cursor: pointer;
+  font-size: 0.9375rem;
+  color: var(--title);
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: all 0.2s ease;
+}
+
+.sidebar-toggle:hover {
+  border-color: var(--title);
+}
+
+.results-info {
+  flex: 1;
+  color: var(--muted);
+  font-size: 0.9375rem;
+  font-weight: 300;
+}
+
+.sort-select {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0;
+  background: var(--primary);
+  cursor: pointer;
+  font-size: 0.9375rem;
+  color: var(--title);
+  font-weight: 300;
+  min-width: 200px;
+  transition: border-color 0.2s ease;
+}
+
+.sort-select:focus {
+  outline: none;
+  border-color: var(--title);
+}
+
+.filters-bar-amazon {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.collection-filters-amazon {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.collection-filter-amazon {
+  padding: 0.75rem 1.5rem;
+  background: var(--primary);
+  border: 1px solid var(--border);
+  border-radius: 0;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  color: var(--muted);
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.collection-filter-amazon:hover {
+  border-color: var(--title);
+  color: var(--title);
+}
+
+.collection-filter-amazon.active {
+  background: var(--title);
+  color: var(--primary);
+  border-color: var(--title);
+}
+
+/* Grid de productos */
+.products-grid-amazon {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.product-card-amazon {
+  background: var(--primary);
+  border: 1px solid var(--border);
+  border-radius: 0;
+  padding: 0;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.product-card-amazon:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+  border-color: var(--title);
+}
+
+.product-link-amazon {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.product-image-amazon {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  margin-bottom: 0;
+  background: var(--primary);
+  border-radius: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-image-amazon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.product-card-amazon:hover .product-image-amazon img {
+  transform: scale(1.05);
+}
+
+.product-badge-amazon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 0;
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.product-badge-amazon.nueva-coleccion {
+  background: var(--accent);
+}
+
+.product-badge-amazon.temporada {
+  background: var(--accent-dark);
+}
+
+.product-info-amazon {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  gap: 0.75rem;
+}
+
+.product-title-amazon {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--title);
+  margin: 0;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  letter-spacing: 0.01em;
+}
+
+.product-subcategory-amazon {
+  font-size: 0.875rem;
+  color: var(--muted);
+  margin: 0;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.product-rating-amazon {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.stars {
+  color: var(--accent);
+  font-size: 0.875rem;
+}
+
+.rating-count {
+  color: var(--muted);
+  font-size: 0.8125rem;
+  font-weight: 300;
+}
+
+.product-price-amazon {
+  margin: 0;
+}
+
+.price-main {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--title);
+  letter-spacing: -0.01em;
+}
+
+.product-stock-amazon {
+  margin: 0;
+}
+
+.product-category-amazon {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin: auto 0 0 0;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.loading-amazon,
+.no-results {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--muted);
+  font-size: 0.9375rem;
+  font-weight: 300;
+}
+
+.no-results {
+  padding: 6rem 2rem;
+}
+
+/* Overlay para mobile */
+.sidebar-overlay {
+  display: none;
+}
+
+/* Mobile */
+@media (max-width: 992px) {
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    backdrop-filter: blur(2px);
+  }
+  .catalog-layout-amazon {
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+  }
+
+  .catalog-header-amazon {
+    padding: 1.5rem 1rem;
+    margin-bottom: 0;
+  }
+
+  .catalog-sidebar {
+    width: 100%;
+    position: fixed;
+    left: -100%;
+    top: 0;
+    height: 100vh;
+    z-index: 1000;
+    background: var(--primary);
+    transition: left 0.3s ease;
+    overflow-y: auto;
+    padding: 2rem;
+    border: none;
+    border-right: 1px solid var(--border);
+  }
+
+  .catalog-sidebar.open {
+    left: 0;
+  }
+
+  .close-sidebar {
+    display: flex;
+  }
+
+  .catalog-main {
+    padding: 1.5rem 1rem;
+  }
+
+  .sidebar-toggle {
+    display: block;
+  }
+
+  .products-grid-amazon {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .catalog-toolbar {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .filters-bar-amazon {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .products-grid-amazon {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .product-info-amazon {
+    padding: 1rem;
+  }
+
+  .product-title-amazon {
+    font-size: 0.9375rem;
+  }
+
+  .price-main {
+    font-size: 1.125rem;
+  }
+
+  .catalog-header-amazon h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .products-grid-amazon {
+    gap: 0.75rem;
+  }
+
+  .product-info-amazon {
+    padding: 0.75rem;
+    gap: 0.5rem;
+  }
+
+  .product-title-amazon {
+    font-size: 0.875rem;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+  }
+
+  .price-main {
+    font-size: 1rem;
+  }
+
+  .product-rating-amazon {
+    display: none;
+  }
+}

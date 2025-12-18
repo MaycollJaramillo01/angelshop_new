@@ -8,11 +8,16 @@ module.exports = {
   JWT_OTP_SECRET: process.env.JWT_OTP_SECRET || 'dev-otp-secret',
   OTP_TTL_MINUTES: Number(process.env.OTP_TTL_MINUTES || 10),
   RESERVATION_TTL_HOURS,
+  // Resend configuration
+  RESEND_API_KEY: process.env.RESEND_API_KEY || 're_Y2AdHaU6_9ZaHtNM1AmDKnZGZhJPcB5iw',
+  // MAIL_FROM: Usar el dominio de prueba de Resend (onboarding@resend.dev) para desarrollo
+  // Para producción, configurar MAIL_FROM con un dominio verificado en Resend
+  MAIL_FROM: process.env.MAIL_FROM || 'Angel Shop <onboarding@resend.dev>',
+  // Legacy SMTP (mantener para compatibilidad, pero no se usará)
   SMTP_HOST: process.env.SMTP_HOST || 'localhost',
   SMTP_PORT: Number(process.env.SMTP_PORT || 1025),
   SMTP_USER: process.env.SMTP_USER || '',
   SMTP_PASS: process.env.SMTP_PASS || '',
-  MAIL_FROM: process.env.MAIL_FROM || 'Angel Shop <no-reply@angelshop.com>',
   RATE_LIMIT_WINDOW_MS: Number(process.env.RATE_LIMIT_WINDOW_MS || 60000),
   RATE_LIMIT_MAX: Number(process.env.RATE_LIMIT_MAX || 120)
 };

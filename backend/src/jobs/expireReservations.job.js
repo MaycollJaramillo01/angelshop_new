@@ -8,10 +8,10 @@ function scheduleExpirationJob() {
     try {
       const now = new Date();
       const toExpire = await Reservation.find({
-        status: { $in: ['PENDING', 'CONFIRMED'] },
-        expiresAt: { $lte: now }
-      }).limit(50);
-      for (const resv of toExpire) {
+        status: { $in: ['PENDING', 'CONFIRMED'] }
+      });
+      const expired = toExpire.filter(r => new Date(r.expiresAt) <= now).slice(0, 50);
+      for (const resv of expired) {
         await expireReservation(resv);
       }
     } catch (err) {

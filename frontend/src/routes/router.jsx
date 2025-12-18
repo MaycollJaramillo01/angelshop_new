@@ -9,6 +9,7 @@ import OtpLogin from '../pages/OtpLogin';
 import MyReservations from '../pages/MyReservations';
 import AdminDashboard from '../pages/AdminDashboard';
 import AdminProducts from '../pages/AdminProducts';
+import AdminProductEdit from '../pages/AdminProductEdit';
 import AdminReservations from '../pages/AdminReservations';
 import AdminReports from '../pages/AdminReports';
 import ProtectedRoute from './ProtectedRoute';
@@ -24,34 +25,31 @@ const router = createBrowserRouter([
       { path: 'producto/:slug', element: <ProductDetail /> },
       {
         path: 'apartado',
-        element: (
-          <ProtectedRoute>
-            <ReserveCart />
-          </ProtectedRoute>
-        )
+        element: <ReserveCart />
       },
       { path: 'otp', element: <OtpLogin /> },
       {
         path: 'mis-reservas',
-        element: (
-          <ProtectedRoute>
-            <MyReservations />
-          </ProtectedRoute>
-        )
+        element: <MyReservations />
       },
       {
+        // /admin no está protegido porque AdminDashboard maneja el login
         path: 'admin',
-        element: (
-          <AdminRoute>
-            <AdminDashboard />
-          </AdminRoute>
-        )
+        element: <AdminDashboard />
       },
       {
         path: 'admin/productos',
         element: (
           <AdminRoute>
             <AdminProducts />
+          </AdminRoute>
+        )
+      },
+      {
+        path: 'admin/productos/:id',
+        element: (
+          <AdminRoute>
+            <AdminProductEdit />
           </AdminRoute>
         )
       },

@@ -1,0 +1,528 @@
+/* Estilos inspirados en Shopify para Admin Reservations */
+
+.admin-page {
+  min-height: 100vh;
+  background: #f6f6f7;
+  padding: 2rem;
+}
+
+.admin-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e1e3e5;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+}
+
+.admin-page-header h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: #202223;
+  letter-spacing: -0.02em;
+}
+
+.admin-content-card {
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e1e3e5;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.status-filters {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  border-bottom: 1px solid #e1e3e5;
+  flex-wrap: wrap;
+}
+
+.status-filter-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #ffffff;
+  border: 1px solid #c9cccf;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9375rem;
+}
+
+.status-filter-btn:hover {
+  background: #f6f6f7;
+  border-color: #8c9196;
+}
+
+.status-filter-btn.active {
+  background: #008060;
+  border-color: #008060;
+  color: #ffffff;
+}
+
+.status-label {
+  font-weight: 500;
+}
+
+.status-count {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.125rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+.status-filter-btn.active .status-count {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.admin-filters {
+  padding: 1.5rem;
+  border-bottom: 1px solid #e1e3e5;
+}
+
+.search-input-wrapper {
+  position: relative;
+  max-width: 500px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6d7175;
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 3rem;
+  border: 1px solid #c9cccf;
+  border-radius: 6px;
+  font-size: 0.9375rem;
+  color: #202223;
+  background: #ffffff;
+  transition: border-color 0.2s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #008060;
+  box-shadow: 0 0 0 1px #008060;
+}
+
+.reservations-list {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.reservation-card {
+  border: 1px solid #e1e3e5;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.2s ease;
+  background: #ffffff;
+}
+
+.reservation-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-color: #c9cccf;
+}
+
+.reservation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e1e3e5;
+}
+
+.reservation-code-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.reservation-code {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #202223;
+  font-family: 'Courier New', monospace;
+}
+
+.reservation-date {
+  font-size: 0.875rem;
+  color: #6d7175;
+}
+
+.reservation-body {
+  margin-bottom: 1rem;
+}
+
+.reservation-info-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.info-label {
+  font-size: 0.8125rem;
+  color: #6d7175;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.info-value {
+  font-size: 0.9375rem;
+  color: #202223;
+  font-weight: 500;
+}
+
+.reservation-items-section {
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #6d7175;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background: #f6f6f7;
+  padding: 1rem;
+  border-radius: 6px;
+}
+
+.item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem;
+  background: #ffffff;
+  border-radius: 4px;
+  border: 1px solid #e1e3e5;
+}
+
+.item-name {
+  font-weight: 500;
+  color: #202223;
+  flex: 1;
+}
+
+.item-details {
+  font-size: 0.875rem;
+  color: #6d7175;
+}
+
+.item-price {
+  font-weight: 600;
+  color: #202223;
+}
+
+.reservation-totals {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 2px solid #e1e3e5;
+}
+
+.total-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.9375rem;
+  color: #6d7175;
+}
+
+.total-amount {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #202223;
+}
+
+.reservation-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e1e3e5;
+}
+
+.reservation-status-control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.status-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #6d7175;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.status-select {
+  padding: 0.625rem 1rem;
+  border: 1px solid #c9cccf;
+  border-radius: 6px;
+  font-size: 0.9375rem;
+  color: #202223;
+  background: #ffffff;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.status-select:focus {
+  outline: none;
+  border-color: #008060;
+  box-shadow: 0 0 0 1px #008060;
+}
+
+.status-select:disabled {
+  background: #f6f6f7;
+  color: #6d7175;
+  cursor: not-allowed;
+}
+
+.status-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.reservation-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.btn-action {
+  padding: 0.625rem 1.25rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-confirm {
+  background: #008060;
+  color: #ffffff;
+}
+
+.btn-confirm:hover {
+  background: #006e52;
+}
+
+.btn-complete {
+  background: #008060;
+  color: #ffffff;
+}
+
+.btn-complete:hover {
+  background: #006e52;
+}
+
+.btn-cancel {
+  background: #ffffff;
+  color: #b91c1c;
+  border: 1px solid #c9cccf;
+}
+
+.btn-cancel:hover {
+  background: #fef2f2;
+  border-color: #b91c1c;
+}
+
+.reservation-expiry {
+  font-size: 0.875rem;
+  color: #f49342;
+  font-weight: 500;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.badge-pending {
+  background: #fff4e6;
+  color: #f49342;
+}
+
+.badge-confirmed {
+  background: #e6f5f2;
+  color: #008060;
+}
+
+.badge-completed {
+  background: #e6f5f2;
+  color: #008060;
+}
+
+.badge-expired {
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.badge-delivery {
+  background: #f3e8ff;
+  color: #7c3aed;
+}
+
+.badge-cancelled {
+  background: #f6f6f7;
+  color: #6d7175;
+}
+
+.badge-default {
+  background: #f6f6f7;
+  color: #6d7175;
+}
+
+.btn-delivery {
+  background: #7c3aed;
+  color: #ffffff;
+}
+
+.btn-delivery:hover {
+  background: #6d28d9;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  background: #ffffff;
+  color: #202223;
+  border: 1px solid #c9cccf;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background: #f6f6f7;
+  border-color: #8c9196;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  color: #6d7175;
+  font-size: 0.9375rem;
+}
+
+.admin-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #e1e3e5;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #e1e3e5;
+  border-top-color: #008060;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-page {
+    padding: 1rem;
+  }
+
+  .admin-page-header {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  .status-filters {
+    padding: 1rem;
+  }
+
+  .status-filter-btn {
+    flex: 1;
+    min-width: calc(50% - 0.25rem);
+  }
+
+  .reservation-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .reservation-info-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .item-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .reservation-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .reservation-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .btn-action {
+    width: 100%;
+  }
+}
+

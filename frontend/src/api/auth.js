@@ -44,3 +44,47 @@ export async function fetchReports(token) {
   });
   return data;
 }
+
+export async function createProduct(token, productData) {
+  const { data } = await http.post('/api/admin/products', productData, {
+    headers: { Authorization: `Bearer ${token}` }
+  });
+  return data;
+}
+
+export async function updateProduct(token, productId, productData) {
+  const { data } = await http.put(`/api/admin/products/${productId}`, productData, {
+    headers: { Authorization: `Bearer ${token}` }
+  });
+  return data;
+}
+
+export async function deleteProduct(token, productId) {
+  const { data } = await http.delete(`/api/admin/products/${productId}`, {
+    headers: { Authorization: `Bearer ${token}` }
+  });
+  return data;
+}
+
+export async function updateProductStock(token, productId, variantSku, delta) {
+  const { data } = await http.patch(
+    `/api/admin/products/${productId}/stock`,
+    { variantSku, delta },
+    { headers: { Authorization: `Bearer ${token}` } }
+  );
+  return data;
+}
+
+export async function fetchProductById(token, productId) {
+  try {
+    const products = await fetchAdminProducts(token);
+    const product = products.find(p => p._id === productId);
+    if (!product) {
+      throw new Error('Producto no encontrado');
+    }
+    return product;
+  } catch (error) {
+    console.error('Error fetching product:', error);
+    throw error;
+  }
+}

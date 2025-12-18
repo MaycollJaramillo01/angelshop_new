@@ -1,0 +1,10 @@
+[
+  {
+    "_id": "mj9lddf3u8mmw3uqrrb",
+    "email": "admin@angelshop.com",
+    "passwordHash": "$2a$10$JgqLpKDm0KbJSQ4yjYd8FOXFtaYxPRQm8am/nEZvEEXqjaoWVLDkm",
+    "role": "ADMIN",
+    "createdAt": "2025-12-17T05:49:25.935Z",
+    "updatedAt": "2025-12-17T05:49:25.936Z"
+  }
+]

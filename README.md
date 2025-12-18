@@ -25,7 +25,7 @@ Frontend en http://localhost:5173 y backend en http://localhost:4000.
 - Frontend: `frontend/.env.example`
 
 ## Seed de datos
-Crea 30 productos con variantes y usuario admin por defecto (`admin@angelshop.com / admin123`).
+Crea 30 productos con variantes y usuario admin por defecto (`admin@angelshop.com / admin2025`).
 ```bash
 npm run seed
 ```

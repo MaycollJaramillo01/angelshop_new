@@ -30,11 +30,12 @@ router.get('/', validate(querySchema), async (req, res, next) => {
     }
     if (size) filter['variants.size'] = size;
     if (color) filter['variants.color'] = color;
+    
+    const allItems = await Product.find(filter);
     const skip = (Number(page) - 1) * Number(limit);
-    const [items, total] = await Promise.all([
-      Product.find(filter).skip(skip).limit(Number(limit)),
-      Product.countDocuments(filter)
-    ]);
+    const items = allItems.slice(skip, skip + Number(limit));
+    const total = allItems.length;
+    
     res.json({ items, total, page: Number(page), limit: Number(limit) });
   } catch (err) {
     next(err);

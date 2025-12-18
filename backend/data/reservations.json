@@ -1,0 +1,306 @@
+[
+  {
+    "_id": "mj6gprhf9d3gsebxsoj",
+    "code": "40A94981",
+    "customerEmail": "maycolljaramillo01@gmail.com",
+    "customerPhone": "58356796",
+    "customerName": "test",
+    "customerAddress": "test tst test",
+    "status": "COMPLETED",
+    "expiresAt": "2025-12-17T01:15:47.427Z",
+    "items": [
+      {
+        "productId": "mj6g3bobww02e7sesj",
+        "variantSku": "PANTALON-DE-VESTIR-1-XXL-CELESTE-4",
+        "qty": 1,
+        "priceSnapshot": 35000,
+        "nameSnapshot": "Pantalón de Vestir 1",
+        "size": "XXL",
+        "color": "Celeste"
+      }
+    ],
+    "totals": {
+      "itemsCount": 1,
+      "subtotal": 35000
+    },
+    "events": [
+      {
+        "type": "CREATED",
+        "at": "2025-12-15T01:15:47.427Z",
+        "meta": {}
+      },
+      {
+        "type": "STATUS_CHANGED",
+        "at": "2025-12-15T02:59:11.933Z",
+        "meta": {
+          "from": "PENDING",
+          "to": "IN_DELIVERY"
+        }
+      },
+      {
+        "type": "STATUS_CHANGED",
+        "at": "2025-12-15T02:59:12.713Z",
+        "meta": {
+          "from": "IN_DELIVERY",
+          "to": "IN_DELIVERY"
+        }
+      },
+      {
+        "type": "STATUS_CHANGED",
+        "at": "2025-12-15T03:09:41.705Z",
+        "meta": {
+          "from": "IN_DELIVERY",
+          "to": "COMPLETED"
+        }
+      },
+      {
+        "type": "STATUS_CHANGED",
+        "at": "2025-12-15T03:09:42.545Z",
+        "meta": {
+          "from": "COMPLETED",
+          "to": "COMPLETED"
+        }
+      }
+    ],
+    "createdAt": "2025-12-15T01:15:47.427Z",
+    "updatedAt": "2025-12-15T03:09:42.546Z"
+  },
+  {
+    "_id": "mj6h6jh8qammxglcny",
+    "code": "7B3B4DC1",
+    "customerEmail": "maycolljaramillo01@gmail.com",
+    "customerPhone": "58256796",
+    "customerName": "test",
+    "customerAddress": "test de envios",
+    "status": "COMPLETED",
+    "expiresAt": "2025-12-17T01:28:50.204Z",
+    "items": [
+      {
+        "productId": "mj6g3bobww02e7sesj",
+        "variantSku": "PANTALON-DE-VESTIR-1-XXL-CELESTE-4",
+        "qty": 1,
+        "priceSnapshot": 35000,
+        "nameSnapshot": "Pantalón de Vestir 1",
+        "size": "XXL",
+        "color": "Celeste"
+      }
+    ],
+    "totals": {
+      "itemsCount": 1,
+      "subtotal": 35000
+    },
+    "events": [
+      {
+        "type": "CREATED",
+        "at": "2025-12-15T01:28:50.204Z",
+        "meta": {}
+      },
+      {
+        "type": "CONFIRMED",
+        "at": "2025-12-15T02:09:50.425Z",
+        "meta": {}
+      },
+      {
+        "type": "COMPLETED",
+        "at": "2025-12-15T02:21:57.633Z",
+        "meta": {}
+      }
+    ],
+    "createdAt": "2025-12-15T01:28:50.204Z",
+    "updatedAt": "2025-12-15T02:21:57.634Z"
+  },
+  {
+    "_id": "mj6hdbn0bsc83j1iw7k",
+    "code": "297A3A09",
+    "customerEmail": "maycolljaramillo01@gmail.com",
+    "customerPhone": "56565656",
+    "customerName": "test",
+    "customerAddress": "test de  envios",
+    "status": "COMPLETED",
+    "expiresAt": "2025-12-17T01:34:06.635Z",
+    "items": [
+      {
+        "productId": "mj6g3bobww02e7sesj",
+        "variantSku": "PANTALON-DE-VESTIR-1-L-ROJO-2",
+        "qty": 1,
+        "priceSnapshot": 35000,
+        "nameSnapshot": "Pantalón de Vestir 1",
+        "size": "L",
+        "color": "Rojo"
+      }
+    ],
+    "totals": {
+      "itemsCount": 1,
+      "subtotal": 35000
+    },
+    "events": [
+      {
+        "type": "CREATED",
+        "at": "2025-12-15T01:34:06.635Z",
+        "meta": {}
+      },
+      {
+        "type": "CONFIRMED",
+        "at": "2025-12-15T02:09:49.204Z",
+        "meta": {}
+      },
+      {
+        "type": "COMPLETED",
+        "at": "2025-12-15T02:21:59.404Z",
+        "meta": {}
+      }
+    ],
+    "createdAt": "2025-12-15T01:34:06.636Z",
+    "updatedAt": "2025-12-15T02:21:59.404Z"
+  },
+  {
+    "_id": "mj6jx5gqk9flm55nv7p",
+    "code": "A68A5B6E",
+    "customerEmail": "maycolljaramillo01@gmail.com",
+    "customerPhone": "58256796",
+    "customerName": "Maycoll Jaramillo",
+    "customerAddress": "test de tienda",
+    "status": "IN_DELIVERY",
+    "expiresAt": "2025-12-17T02:45:30.986Z",
+    "items": [
+      {
+        "productId": "mj6hx5pihebs9uf0f8",
+        "variantSku": "PANTALON-DE-VESTIR-1-S-BLANCO-0",
+        "qty": 1,
+        "priceSnapshot": 35000,
+        "nameSnapshot": "Pantalón de Vestir 1",
+        "size": "S",
+        "color": "Blanco"
+      }
+    ],
+    "totals": {
+      "itemsCount": 1,
+      "subtotal": 35000
+    },
+    "events": [
+      {
+        "type": "CREATED",
+        "at": "2025-12-15T02:45:30.986Z",
+        "meta": {}
+      },
+      {
+        "type": "STATUS_CHANGED",
+        "at": "2025-12-15T02:49:26.348Z",
+        "meta": {
+          "from": "PENDING",
+          "to": "IN_DELIVERY"
+        }
+      },
+      {
+        "type": "STATUS_CHANGED",
+        "at": "2025-12-15T02:52:59.069Z",
+        "meta": {
+          "from": "IN_DELIVERY",
+          "to": "CONFIRMED"
+        }
+      },
+      {
+        "type": "STATUS_CHANGED",
+        "at": "2025-12-15T03:25:05.517Z",
+        "meta": {
+          "from": "CONFIRMED",
+          "to": "IN_DELIVERY"
+        }
+      },
+      {
+        "type": "STATUS_CHANGED",
+        "at": "2025-12-15T03:25:06.327Z",
+        "meta": {
+          "from": "IN_DELIVERY",
+          "to": "IN_DELIVERY"
+        }
+      }
+    ],
+    "createdAt": "2025-12-15T02:45:30.986Z",
+    "updatedAt": "2025-12-15T03:25:06.327Z"
+  },
+  {
+    "_id": "mj9jh9nrutu1tuyoyye",
+    "code": "D0D913AD",
+    "customerEmail": "test@gmail.com",
+    "customerPhone": "63785006",
+    "customerName": "Joan mendoza",
+    "customerAddress": "Escuela Ramona Soza Moreno",
+    "status": "COMPLETED",
+    "expiresAt": "2025-12-19T04:56:28.455Z",
+    "items": [
+      {
+        "productId": "mj9j95zy9yxu8ca0pr6",
+        "variantSku": "PANTALON-PALAZZO-1-XL-VEISH-3",
+        "qty": 1,
+        "priceSnapshot": 32000,
+        "nameSnapshot": "Pantalón Palazzo 1",
+        "size": "XL",
+        "color": "Veish"
+      }
+    ],
+    "totals": {
+      "itemsCount": 1,
+      "subtotal": 32000
+    },
+    "events": [
+      {
+        "type": "CREATED",
+        "at": "2025-12-17T04:56:28.455Z",
+        "meta": {}
+      },
+      {
+        "type": "STATUS_CHANGED",
+        "at": "2025-12-17T05:05:14.942Z",
+        "meta": {
+          "from": "PENDING",
+          "to": "COMPLETED"
+        }
+      },
+      {
+        "type": "STATUS_CHANGED",
+        "at": "2025-12-17T05:05:15.711Z",
+        "meta": {
+          "from": "COMPLETED",
+          "to": "COMPLETED"
+        }
+      }
+    ],
+    "createdAt": "2025-12-17T04:56:28.455Z",
+    "updatedAt": "2025-12-17T05:05:15.712Z"
+  },
+  {
+    "_id": "mj9jq9kxqxdhx96i0qi",
+    "code": "3ABC45A8",
+    "customerEmail": "test@gmail.com",
+    "customerPhone": "88888888",
+    "customerName": "test",
+    "customerAddress": "test test test",
+    "status": "PENDING",
+    "expiresAt": "2025-12-19T05:03:28.256Z",
+    "items": [
+      {
+        "productId": "mj9j95zyxh9o6ivr9u",
+        "variantSku": "PANTALON-DE-VESTIR-2-M-ROJO-1",
+        "qty": 1,
+        "priceSnapshot": 37000,
+        "nameSnapshot": "Pantalón de Vestir 2",
+        "size": "M",
+        "color": "Rojo"
+      }
+    ],
+    "totals": {
+      "itemsCount": 1,
+      "subtotal": 37000
+    },
+    "events": [
+      {
+        "type": "CREATED",
+        "at": "2025-12-17T05:03:28.256Z",
+        "meta": {}
+      }
+    ],
+    "createdAt": "2025-12-17T05:03:28.257Z",
+    "updatedAt": "2025-12-17T05:03:28.258Z"
+  }
+]
